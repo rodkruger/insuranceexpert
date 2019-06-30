@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3da6dd2c-6d07-4d33-ae94-b7cf6d6da2f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainGui.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainGui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,10 +15,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MainGui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="272">
+              <caret line="367" column="29" selection-start-line="367" selection-start-column="29" selection-end-line="367" selection-end-column="29" />
               <folding>
-                <element signature="e#0#24#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -33,6 +32,42 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>esporte</find>
+      <find>sports_</find>
+      <find>wgt_has_safe_boxs</find>
+      <find>wgt_car_coverage_type</find>
+      <find>cance</find>
+      <find>infa</find>
+      <find>stroke</find>
+      <find>wgt_heart_disease</find>
+      <find>congeni</find>
+      <find>Cardiopa</find>
+      <find>wgt_cpf_negativado</find>
+      <find>Grid</find>
+      <find>MainScreen</find>
+      <find>height=40</find>
+      <find>halign='left',</find>
+      <find>width=175,</find>
+      <find>height=25,</find>
+      <find>width=200</find>
+      <find>, height=50</find>
+      <find>mero de</find>
+      <find>viagnes</find>
+      <find>DropD</find>
+      <find>Textinp</find>
+      <find>on_wgt_btn_show_common_click</find>
+      <find>Button</find>
+      <find>on_press</find>
+      <find>_click</find>
+      <find>on_wgt_btn_show_common_press</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>height=25</replace>
+      <replace>_press</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -155,8 +190,8 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16530278" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17021276" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -185,12 +220,26 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/kivy/uix/button.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/kivy/uix/behaviors/button.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1296">
+          <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MainGui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state relative-caret-position="272">
+          <caret line="367" column="29" selection-start-line="367" selection-start-column="29" selection-end-line="367" selection-end-column="29" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
