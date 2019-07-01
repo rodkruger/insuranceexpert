@@ -1,0 +1,283 @@
+regras se
+
+
+se cpf=negativado
+	então negar seguro
+se pratica esportes radicais=verdadeiro
+	então negar seguro
+se piloto de corrida=verdadeiro
+	então negar seguro
+se usa drogas=verdadeiro
+	então negar seguro
+se possui doenças graves=verdadeiro
+	então negar seguro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se recebeu indenização por invalidez=verdadeiro
+	então negar seguro
+se fuma=verdadeiro
+	então aumentar valor do seguro
+se bebe=verdadeiro
+	então aumentar valor do seguro
+se cep=região perigosa
+	então aumentar valor do seguro
+se atividade profissional a bordo de aeronaves=verdadeiro
+	então negar seguro
+se idade>60
+	então aumentar valor do seguro
+se idade>70
+	então negar seguro
+se nivel de diabetes>normal
+	então aumentar valor do seguro
+se nivel de diabete>muito acima do normal
+	então negar seguro
+se tipo de profissão=profissão de risco
+	então aumentar valor do seguro
+se profissão=(militar ou policial ou segurança privada)
+	então negar seguro
+se pressão=alta
+	então aumentar valor do seguro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se sedentario=verdadeiro
+	então aumentar valor do seguro
+se bom pagador=verdadeiro
+	então diminuir valor do seguro
+se mal pagador=verdadeiro
+	então aumentar valor do seguro
+se possui filhos=verdadeiro
+	então aumento % por filho
+se casado=verdadeiro
+	então aumentar valor do seguro e oferecer seguro para conjuge
+se frequencia de viagens>3 ao ano
+	então aumentar valor do seguro
+se doença neurologica=verdadeiro
+	então aumentar valor o seguro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se possuir carro=verdadeiro
+	oferecer seguro para carro
+	se cliente aceitar=verdadeiro
+		então continuar com seguro de carro
+	se idade<25
+		então aumentar valor do seguro
+	se possui abs ou airbag=verdadeiro
+		então aumentar valor do seguro
+	se francês ou chines=verdadeiro
+		então aumentar valor do seguro
+	se alemão ou japones=verdadeiro
+		então diminuir valor do seguro
+	se seguro contra terceiros=verdadeiro
+		então aumentar valor do seguro
+	se franquia reduzida=verdadeiro
+		então aumentar valor do seguro
+	se cobertura roubo=verdadeiro
+		então aumentar valor do seguro
+	se cobertura incendio=verdadeiro
+		então aumentar valor do seguro
+	se idade do carro>20
+		então aumentar valor do seguro
+	se um condutor=verdadeiro
+		então diminuir valor do seguro
+	se carro fica dentro de garagem=verdadeiro
+		então diminuir valor do seguro
+	se uso do carro para fins profissionais=verdadeiro
+		então aumentar valor do seguro
+	se carro reserva=verdadeiro
+		então aumentar valor do seguro
+	se cobertura de acidentes pessoais de passageiros=verdadeiro
+		então aumentar valor do seguro
+	se condutor já teve acidente de carro=verdadeiro
+		então aumentar valor do seguro
+	se indenização maior que a fipe=verdadeiro
+		então aumentar valor do seguro
+	se sexo=masculino
+		então aumentar valor do seguro
+	se veiculo possui rastreador=verdadeiro
+		então diminuir valor do seguro
+	se indice de roubo>10%
+		então aumentar valor do seguro
+	se utiliza o veiculo para viagens=verdadeiro
+		então aumentar valor do seguro
+	se cobertura básica=verdadeiro
+		então diminuir valor do seguro
+	se cobertura completa=verdadeiro
+		então manter valor do seguro
+	se cobertura premium=verdadeiro
+		então aumentar valor do seguro
+	se pontos<300
+		então alto risco e negar seguro
+	se pontos>=300 e pontos<500
+		então medio risco e avaliar situação
+	se pontos>=700
+		então baixo risco e conceder seguro
+se possuir divida=verdadeiro
+	aumentar % de risco
+se já fez cirurgia de alto risco=verdadeiro
+	então negar seguro
+se possui marcapasso=verdadeiro
+	então negar seguro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se possui problema cardiaco=verdadeiro
+	então negar seguro
+se possui historico de cancer na familia=verdadeiro
+	então aumentar valor do seguro
+se tipo sanguineo=O+ ou O-
+	então diminuir o valor do seguro
+se tipo sanguineo=AB+ ou AB-
+	então aumentar o valor do seguro
+se celiaco=verdadeiro
+	então aumentar o valor do seguro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se hipolactasia=verdadeiro
+	então aumentar valor do seguro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se doença terminal=verdadeiro
+	então negar seguro
+se doença auto imune=verdadeiro
+	então aumentar valor do seguro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se nao tomou vacina polio=verdadeiro
+	então aumentar valor do seguro
+se não tomou vacina meningite=verdadeiro
+	então negar seguro
+se não tomou vacina febre amarela=verdadeiro
+	então negar seguro
+se já viajou ou vai viajar para paises da africa=verdadeiro
+	então aumentar valor do seguro
+se já viajou ou vai viajar para paises em guerra=verdadeiro
+	então negar seguro
+se desempregado=verdadeiro
+	então aumentar valor do seguro
+se pratica esportes de tiro=verdadeiro
+	então negar seguro
+se sedentário=verdadeiro
+	então aumentar valor do seguro
+se possuir casa propria=verdadeiro
+	então oferecer seguro residencial
+	se cliente aceitar=verdadeiro
+		então continuar com seguro residencial
+	se cep=região perigosa
+		então aumentar valor do seguro
+	se localizada em area de risco natural=verdadeiro
+		então negar seguro
+	se imovel em construção=verdadeiro
+		então diminuir valor do seguro
+	se possui alarme ou sistema de monitoramento=verdadeiro
+		então diminuir valor do seguro
+	se imovel tombado(patrimonio historico)=verdadeiro
+		então aumentar valor do seguro
+	se destinado para moradia coletiva ou republica=verdadeira
+		então aumentar o valor do seguro
+	se tipo de moradia=casa    PAREI AQUI
+		então aumentar valor do seguro
+	se tipo de moradia=apartamento
+		então diminuir valor do seguro
+	se imovel utiliza materiais combustiveis=verdadeiro
+		então aumentar valor do seguro
+	se numero de aparelhos eletronicos e domesticos>10
+		então aumentar valor do seguro
+	se valor dos bens>100.000
+		então aumentar valor do consumo
+	se possui cofre=verdadeiro
+		então aumentar valor do consumo
+	se desejar serviços emergenciais=verdadeiro
+		então aumentar valor do consumo
+	se imovel já houve sinistro=verdadeiro
+		então aumentar valor de consumo
+	se cobertura básica=verdadeiro
+		então diminuir valor do seguro
+	se cobertura completa=verdadeiro
+		então manter valor do seguro
+	se cobertura premium=verdadeiro
+		então aumentar valor do seguro
+	se pontos<300
+		então alto risco e negar seguro
+	se pontos>=300 e pontos<500
+		então medio risco e avaliar situação
+	se pontos>=700
+		então baixo risco e conceder seguro
+se já realizou algum transplante=verdadeiro
+	então aumentar valor do seguro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se nivel de LDL>500
+	então aumentar valor do seguro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se já teve cancer=verdadeiro
+	então negar seguro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se já teve infarte=verdadeiro
+	então negar seguro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se já teve avc=verdadeiro
+	então negar seguro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se tiver alguma deficiência=verdadeiro
+	então negar seguro
+se obesidade=verdadeiro
+	então aumentar valor do seguro
+se possui cardiopatia congenita=verdadeiro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se possui artrose=verdadeiro
+	então aumentar valor seguro
+se utiliza medicamento controlado=verdadeiro
+	então aumentar valor seguro
+se possuir doença sexualmente transmissivel=verdadeiro
+	se faz acompanhamento medico=verdadeiro
+		então aumentar valor do seguro
+	se não faz acompanhamento medico=verdadeiro
+		então negar valor do seguro
+se possui hepatite B=verdadeiro
+	então aumentar valor do seguro
+se sexo=feminino e gravida=verdadeiro
+	então aumentar valor de seguro
+se possuir plano de saude=verdadeiro
+	então diminuir valor de seguro
+se cobertura básica=verdadeiro
+	então diminuir valor do seguro
+se cobertura completa=verdadeiro
+	então manter valor do seguro
+se cobertura premium=verdadeiro
+	então aumentar valor do seguro
+se pontos<300
+	então alto risco e negar seguro
+se pontos>=300 e pontos<500
+	então medio risco e avaliar situação
+se pontos>=700
+	então baixo risco e conceder seguro
