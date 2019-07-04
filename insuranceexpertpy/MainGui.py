@@ -324,18 +324,22 @@ class MainScreen(BoxLayout):
 
     def on_wgt_btn_show_common_press(instance, value):
         instance.main_lyt.clear_widgets()
+        instance.clear_parents()
         instance.fillCommon()
 
     def on_wgt_btn_show_life_press(instance, value):
         instance.main_lyt.clear_widgets()
+        instance.clear_parents()
         instance.fillLifeInsurance()
 
     def on_wgt_btn_show_home_press(instance, value):
         instance.main_lyt.clear_widgets()
+        instance.clear_parents()
         instance.fillHomeInsurance()
 
     def on_wgt_btn_show_car_press(instance, value):
         instance.main_lyt.clear_widgets()
+        instance.clear_parents()
         instance.fillCarInsurance()
 
     def on_wgt_btn_calculate_press(instance, value):
@@ -437,6 +441,99 @@ class MainScreen(BoxLayout):
         print(engine.facts)
         print(engine.insuranceScore)
 
+    def clear_parents(self):
+        self.wgt_cpf_negativado.parent = None
+        self.wgt_age.parent = None
+        self.wgt_children.parent = None
+        self.wgt_marital_status.parent = None
+        self.wgt_gender.parent = None
+        self.wgt_unemployed.parent = None
+        self.wgt_height.parent = None
+        self.wgt_weight.parent = None
+        self.wgt_pregnant.parent = None
+        self.wgt_serasa_score.parent = None
+        self.wgt_profession.parent = None
+        self.wgt_radical_sports.parent = None
+        self.wgt_racing_driver.parent = None
+        self.wgt_use_drugs.parent = None
+        self.wgt_serious_diseases.parent = None
+        self.wgt_medical_monitoring.parent = None
+        self.wgt_invalidity.parent = None
+        self.wgt_smoker.parent = None
+        self.wgt_alcohol.parent = None
+        self.wgt_dangerous_zone.parent = None
+        self.wgt_airline_crew.parent = None
+        self.wgt_diabetes.parent = None
+        self.wgt_arterial_hypertension.parent = None
+        self.wgt_sports_practice.parent = None
+        self.wgt_travels.parent = None
+        self.wgt_neurological_disease.parent = None
+        self.wgt_surgery.parent = None
+        self.wgt_pacemaker.parent = None
+        self.wgt_auto_immune_disease.parent = None
+        self.wgt_heart_disease.parent = None
+        self.wgt_cancer.parent = None
+        self.wgt_blood_type.parent = None
+        self.wgt_celia.parent = None
+        self.wgt_lactose_intolerance.parent = None
+        self.wgt_terminal_disease.parent = None
+        self.wgt_vaccine_polio.parent = None
+        self.wgt_vaccine_meningite.parent = None
+        self.wgt_vaccine_yellow_fever.parent = None
+        self.wgt_africa_travel.parent = None
+        self.wgt_war_travel.parent = None
+        self.wgt_shoot_practice.parent = None
+        self.wgt_transplant.parent = None
+        self.wgt_heart_attack.parent = None
+        self.wgt_stroke.parent = None
+        self.wgt_deficiencies.parent = None
+        self.wgt_osteoarthritis.parent = None
+        self.wgt_controlled_medication.parent = None
+        self.wgt_sexual_disease.parent = None
+        self.wgt_hepatitis.parent = None
+        self.wgt_health_plan.parent = None
+        self.wgt_life_coverage_type.parent = None
+        self.wgt_heart_congenital.parent = None
+        self.wgt_brand.parent = None
+        self.wgt_model.parent = None
+        self.wgt_year.parent = None
+        self.wgt_abs.parent = None
+        self.wgt_airbags.parent = None
+        self.wgt_third.parent = None
+        self.wgt_reduced.parent = None
+        self.wgt_theft.parent = None
+        self.wgt_fire.parent = None
+        self.wgt_drivers.parent = None
+        self.wgt_garage.parent = None
+        self.wgt_professional.parent = None
+        self.wgt_backup_car.parent = None
+        self.wgt_personal_passenger.parent = None
+        self.wgt_accident.parent = None
+        self.wgt_extra_fipe.parent = None
+        self.wgt_tracker.parent = None
+        self.wgt_theft_index.parent = None
+        self.wgt_for_travel.parent = None
+        self.wgt_car_coverage_type.parent = None
+        self.wgt_combustible_materials.parent = None
+        self.wgt_dangerous_neighbour.parent = None
+        self.wgt_natural_risk.parent = None
+        self.wgt_under_construction.parent = None
+        self.wgt_has_alarm.parent = None
+        self.wgt_historical.parent = None
+        self.wgt_shared.parent = None
+        self.wgt_residence_type.parent = None
+        self.wgt_number_of_electronics.parent = None
+        self.wgt_value_of_goods = TextInput(width=200, size_hint=(None, 1))
+        self.wgt_has_safe_box.parent = None
+        self.wgt_needs_emergencial_services.parent = None
+        self.wgt_insurance_claim.parent = None
+        self.wgt_home_coverage_type.parent = None
+        self.wgt_points.parent = None
+        self.wgt_btn_show_common.parent = None
+        self.wgt_btn_show_life.parent = None
+        self.wgt_btn_show_home.parent = None
+        self.wgt_btn_show_car.parent = None
+        self.wgt_btn_calculate.parent = None
 
 class MyApp(App):
 
