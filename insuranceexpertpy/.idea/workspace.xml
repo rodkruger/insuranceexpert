@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3da6dd2c-6d07-4d33-ae94-b7cf6d6da2f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LifeInsurance.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LifeInsurance.py" beforeDir="false" afterPath="$PROJECT_DIR$/LifeInsurance.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainGui.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainGui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +17,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MainGui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="434" selection-start-line="434" selection-end-line="434" />
+            <state relative-caret-position="107">
+              <caret line="349" column="41" selection-start-line="349" selection-start-column="41" selection-end-line="349" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -26,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LifeInsurance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6559">
-              <caret line="55" column="17" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="17" />
+            <state relative-caret-position="164">
+              <caret line="464" column="28" selection-start-line="464" selection-start-column="15" selection-end-line="464" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -43,8 +46,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>debug</find>
-      <find>debugWidget</find>
       <find>Label(text='</find>
       <find>CheckBox()</find>
       <find>car_insurance_rules_lyt.add_widget(Label(text='</find>
@@ -73,6 +74,8 @@
       <find>artros</find>
       <find>possuiPlanoDeSaude</find>
       <find>on_wgt_btn_calculate_press</find>
+      <find>doencasGrav</find>
+      <find>acompanha</find>
     </findStrings>
     <replaceStrings>
       <replace>height=25</replace>
@@ -191,8 +194,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2405892" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5646481" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30441898" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -229,8 +232,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/MainGui.py</url>
-          <line>344</line>
-          <option name="timeStamp" value="1" />
+          <line>434</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -280,15 +283,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LifeInsurance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6559">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="17" />
+        <state relative-caret-position="164">
+          <caret line="464" column="28" selection-start-line="464" selection-start-column="15" selection-end-line="464" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MainGui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="434" selection-start-line="434" selection-end-line="434" />
+        <state relative-caret-position="107">
+          <caret line="349" column="41" selection-start-line="349" selection-start-column="41" selection-end-line="349" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

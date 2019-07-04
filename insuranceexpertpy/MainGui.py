@@ -347,7 +347,9 @@ class MainScreen(BoxLayout):
         engine.declare(Fact(pilotoDeCorrida=instance.wgt_racing_driver.active))
         engine.declare(Fact(usaDrogas=instance.wgt_use_drugs.active))
         engine.declare(Fact(possuiDoencasGraves=instance.wgt_serious_diseases.active))
+        engine.declare(Fact(doencasGraves=instance.wgt_serious_diseases.active))
         engine.declare(Fact(acompanhamentoMedico=instance.wgt_medical_monitoring.active))
+        engine.declare(Fact(acompanhamento=instance.wgt_medical_monitoring.active))
         engine.declare(Fact(recebeuIndenizacaoPorInvalidez=instance.wgt_invalidity.active))
         engine.declare(Fact(fumante=instance.wgt_smoker.active))
         engine.declare(Fact(ingereBebidaDeAlcool=instance.wgt_alcohol.active))
@@ -430,11 +432,10 @@ class MainScreen(BoxLayout):
         engine.declare(Fact(gravida=instance.wgt_pregnant.active))
         engine.declare(Fact(possuiPlanoDeSaude=instance.wgt_health_plan.active))
 
+        engine.run()
+
         print(engine.facts)
-
-        # engine.run()
-
-        # pass
+        print(engine.insuranceScore)
 
 
 class MyApp(App):

@@ -444,14 +444,75 @@ class possuiPlanoDeSaude(Fact):
 
 
 class SeguroDeVida(KnowledgeEngine):
-    @Rule(Fact(cpf=True))
+
+    insuranceScore = 0
+
+    @Rule(Fact(cpf=True) | Fact(esportesRadicais=True)
+          | Fact(pilotoCorrida=True)
+          | Fact(drogas=True)
+          | Fact(indenizacao=True)
+          | Fact(aeronaves=True))
     def NegarSeguro(self):
-        print("Não é possível realizar um seguro para o cliente")
+        self.declare(Fact(seguro_nao_possivel=True))
 
-    @Rule(possuiDoencasGraves(doencasGraves=True) & acompanhamentoMedico(acompanhamento=True))
+    @Rule(Fact(doencasGraves=True) & Fact(acompanhamento=True))
     def DuplicarValor(self):
-        print("Duplicar valor do seguro")
+        if (self.insuranceScore == 0):
+            self.insuranceScore = 2
+        else:
+            self.insuranceScore *= 2
 
+    @Rule(Fact(doencasGraves=True) & Fact(acompanhamento=False))
+    def NegarSeguro(self):
+        self.declare(Fact(seguro_nao_possivel=True))
+
+    @Rule(Fact(fuma=True)
+          | Fact(bebe=True)
+          | Fact(cep=True)
+          | Fact(sedentario_=True)
+          | Fact(pagador=True))
+    def AumentarValor(self):
+        self.insuranceScore += 1
+
+    @Rule(Fact(idade=P(lambda idade: idade >= 60 and idade < 70)))
+    def AumentarValor(self):
+        self.insuranceScore += 1
+
+    @Rule(Fact(idade=P(lambda idade: idade >= 70)))
+    def NegarSeguro(self):
+        self.declare(Fact(seguro_nao_possivel=True))
+
+    @Rule(Fact(diabetes=P(lambda diabetes: diabetes > normal)))
+    def AumentarValor(self):
+        self.insuranceScore += 1
+
+#    @Rule(Fact(diabetes=P(lambda diabetes: diabetes > muito acima do normal)))
+#    def NegarSeguro(self):
+#        print("Não é possível realizar um seguro para o cliente")
+
+    @Rule(Fact(profissao=True))
+    def AumentarValor(self):
+        self.insuranceScore += 1
+
+    @Rule(Fact(pressao=True) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        self.insuranceScore += 1
+
+    @Rule(Fact(pressao=True) & Fact(acompanhamento=False))
+    def NegarSeguro(self):
+        self.declare(Fact(seguro_nao_possivel=True))
+
+    @Rule(Fact(possuiFilhos_=True) & Fact(quantosFilhos=P(lambda possuiFilhos_: possuiFilhos_ > 0)))
+    def AumentoPercentual(self):
+        self.insuranceScore += 1
+
+    @Rule(Fact(casado=True))
+    def AumentarEOferecer(self):
+        self.insuranceScore += 1
+
+    @Rule(Fact(viagens=P(lambda viagens: viagens > 3)))
+    def AumentarValor(self):
+        self.insuranceScore += 1
 
 # engine = SeguroDeVida()
 # engine.reset()
