@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3da6dd2c-6d07-4d33-ae94-b7cf6d6da2f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/LifeInsurance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainGui.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainGui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +17,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MainGui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="436">
+              <caret line="434" selection-start-line="434" selection-end-line="434" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LifeInsurance.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6559">
+              <caret line="55" column="17" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -35,29 +43,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>halign='left',</find>
-      <find>width=175,</find>
-      <find>height=25,</find>
-      <find>width=200</find>
-      <find>, height=50</find>
-      <find>mero de</find>
-      <find>viagnes</find>
-      <find>DropD</find>
-      <find>Textinp</find>
-      <find>on_wgt_btn_show_common_click</find>
-      <find>Button</find>
-      <find>on_press</find>
-      <find>_click</find>
-      <find>on_wgt_btn_show_common_press</find>
-      <find>main_</find>
-      <find>main_l</find>
-      <find>main_la</find>
-      <find>marital</find>
-      <find>gender</find>
-      <find>viagens</find>
-      <find>Sangu</find>
-      <find>life_insurance_lyt</find>
-      <find>terminal</find>
       <find>debug</find>
       <find>debugWidget</find>
       <find>Label(text='</find>
@@ -65,6 +50,29 @@
       <find>car_insurance_rules_lyt.add_widget(Label(text='</find>
       <find>life_insurance_rules_lyt.add_widget(Label(text='</find>
       <find>common_lyt.add_widget(Label(text='</find>
+      <find>pilot</find>
+      <find>graves</find>
+      <find>invalide</find>
+      <find>Condutor</find>
+      <find>reserva</find>
+      <find>acidente</find>
+      <find>divida</find>
+      <find>ma</find>
+      <find>tiro</find>
+      <find>propr</find>
+      <find>propr'</find>
+      <find>coletiv</find>
+      <find>combust</find>
+      <find>bens</find>
+      <find>cofre</find>
+      <find>sinistro</find>
+      <find>transpl</find>
+      <find>avc</find>
+      <find>obesid</find>
+      <find>cardiopa</find>
+      <find>artros</find>
+      <find>possuiPlanoDeSaude</find>
+      <find>on_wgt_btn_calculate_press</find>
     </findStrings>
     <replaceStrings>
       <replace>height=25</replace>
@@ -81,17 +89,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/LifeInsurance.py" />
         <option value="$PROJECT_DIR$/MainGui.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/insuranceexpertpy.iml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
       </list>
     </option>
   </component>
@@ -107,7 +106,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,6 +122,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,12 +186,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18675596" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31914893" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2405892" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -206,12 +205,12 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18675596" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31914893" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15548281" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -224,6 +223,17 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/MainGui.py</url>
+          <line>344</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -261,13 +271,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/kivy/uix/checkbox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LifeInsurance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6559">
+          <caret line="55" column="17" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MainGui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="436">
+          <caret line="434" selection-start-line="434" selection-end-line="434" />
         </state>
       </provider>
     </entry>

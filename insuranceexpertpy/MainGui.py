@@ -9,8 +9,25 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 from kivy.uix.spinner import Spinner
 from kivy.uix.textinput import TextInput
+from pyknow import Fact
+
+from LifeInsurance import SeguroDeVida
 
 kivy.require('1.11.1')
+
+
+def convertStrToFloat(floatAsStr):
+    if not floatAsStr:
+        return 0
+    else:
+        return float(floatAsStr)
+
+
+def convertStrToInt(intAsStr):
+    if not intAsStr:
+        return 0
+    else:
+        return float(intAsStr)
 
 
 class MainScreen(BoxLayout):
@@ -123,6 +140,7 @@ class MainScreen(BoxLayout):
     wgt_btn_show_life = Button(text="Seguro de Vida", size_hint=(1, .25))
     wgt_btn_show_home = Button(text="Seguro Residencial", size_hint=(1, .25))
     wgt_btn_show_car = Button(text="Seguro de Automóvel", size_hint=(1, .25))
+    wgt_btn_calculate = Button(text="Calcular", size_hint=(1, .25))
 
     def __init__(self, **kwargs):
         super(MainScreen, self).__init__(**kwargs)
@@ -170,11 +188,13 @@ class MainScreen(BoxLayout):
         buttons_lyt.add_widget(self.wgt_btn_show_life)
         buttons_lyt.add_widget(self.wgt_btn_show_home)
         buttons_lyt.add_widget(self.wgt_btn_show_car)
+        buttons_lyt.add_widget(self.wgt_btn_calculate)
 
         self.wgt_btn_show_common.bind(on_press=self.on_wgt_btn_show_common_press)
         self.wgt_btn_show_life.bind(on_press=self.on_wgt_btn_show_life_press)
         self.wgt_btn_show_home.bind(on_press=self.on_wgt_btn_show_home_press)
         self.wgt_btn_show_car.bind(on_press=self.on_wgt_btn_show_car_press)
+        self.wgt_btn_calculate.bind(on_press=self.on_wgt_btn_calculate_press)
 
         self.add_widget(buttons_lyt)
 
@@ -317,6 +337,104 @@ class MainScreen(BoxLayout):
     def on_wgt_btn_show_car_press(instance, value):
         instance.main_lyt.clear_widgets()
         instance.fillCarInsurance()
+
+    def on_wgt_btn_calculate_press(instance, value):
+        engine = SeguroDeVida()
+        engine.reset()
+
+        engine.declare(Fact(cpf=instance.wgt_cpf_negativado.active))
+        engine.declare(Fact(praticaEsportesRadicais=instance.wgt_radical_sports.active))
+        engine.declare(Fact(pilotoDeCorrida=instance.wgt_racing_driver.active))
+        engine.declare(Fact(usaDrogas=instance.wgt_use_drugs.active))
+        engine.declare(Fact(possuiDoencasGraves=instance.wgt_serious_diseases.active))
+        engine.declare(Fact(acompanhamentoMedico=instance.wgt_medical_monitoring.active))
+        engine.declare(Fact(recebeuIndenizacaoPorInvalidez=instance.wgt_invalidity.active))
+        engine.declare(Fact(fumante=instance.wgt_smoker.active))
+        engine.declare(Fact(ingereBebidaDeAlcool=instance.wgt_alcohol.active))
+        engine.declare(Fact(cepPerigoso=instance.wgt_dangerous_neighbour.active))
+        engine.declare(Fact(atividadeProfissionalABordoDeAeronaves=instance.wgt_airline_crew.active))
+        engine.declare(Fact(idade=convertStrToFloat(instance.wgt_age.text)))
+        engine.declare(Fact(nivelDiabetes=instance.wgt_diabetes.active))
+        engine.declare(Fact(tipoDeProfissao=instance.wgt_profession.text))
+        # engine.declare(Fact(nivelPressao=<to_be_defined>))
+        engine.declare(Fact(sedentario=instance.wgt_sports_practice.active))
+        # engine.declare(Fact(bomPagador=<to_be_defined>))
+        # engine.declare(Fact(possuiFilhos=<to_be_defined>))
+        engine.declare(Fact(quantidadeDeFilhos=convertStrToInt(instance.wgt_children.text)))
+        engine.declare(Fact(casadoSolteiro=instance.wgt_marital_status.text))
+        engine.declare(Fact(frequenciaDeViagens=convertStrToInt(instance.wgt_travels.text)))
+        engine.declare(Fact(doencaNeurologica=instance.wgt_neurological_disease.active))
+        engine.declare(Fact(cirurgiaAltoRisco=instance.wgt_surgery.active))
+        engine.declare(Fact(possuiMarcapasso=instance.wgt_pacemaker.active))
+        engine.declare(Fact(possuiProblemaCardiaco=instance.wgt_heart_disease.active))
+        engine.declare(Fact(possuiHistoricoCancerNaFamilia=instance.wgt_cancer.active))
+        engine.declare(Fact(tipoSanguineo=instance.wgt_blood_type.text))
+        engine.declare(Fact(celiaco=instance.wgt_celia.active))
+        engine.declare(Fact(hipolactasia=instance.wgt_lactose_intolerance.active))
+        engine.declare(Fact(doencaTerminal=instance.wgt_terminal_disease.active))
+        engine.declare(Fact(doencaAutoImune=instance.wgt_auto_immune_disease.active))
+        engine.declare(Fact(tomouVacinaPolio=instance.wgt_vaccine_polio.active))
+        engine.declare(Fact(tomouVacinaMeningite=instance.wgt_vaccine_meningite.active))
+        engine.declare(Fact(viagemPaisesAfrica=instance.wgt_africa_travel.active))
+        engine.declare(Fact(viagemPaisesEmGuerra=instance.wgt_war_travel.active))
+        engine.declare(Fact(desempregado=instance.wgt_unemployed.active))
+        engine.declare(Fact(praticaEsportesTiro=instance.wgt_shoot_practice.active))
+        engine.declare(Fact(jaRealizouAlgumTransplante=instance.wgt_transplant.active))
+
+        engine.declare(Fact(possuiABSouAirbag=instance.wgt_airbags.active))
+        # engine.declare(Fact(francesOuChines=instance.wgt_model.text))
+        # engine.declare(Fact(alemaoOuJapones=instance.wgt_model.text))
+        engine.declare(Fact(seguroContraTerceiros=instance.wgt_third.active))
+        engine.declare(Fact(franquiaReduzida=instance.wgt_reduced.active))
+        engine.declare(Fact(coberturaRoubo=instance.wgt_theft.active))
+        engine.declare(Fact(coberturaIncendio=instance.wgt_fire.active))
+        engine.declare(Fact(idadeDoCarro=convertStrToInt(instance.wgt_year.text)))
+        # engine.declare(Fact(umCondutor=<to_be_defined>))
+        engine.declare(Fact(carroFicaDentroGaragem=instance.wgt_garage.active))
+        engine.declare(Fact(carroReserva=instance.wgt_backup_car.active))
+        engine.declare(Fact(coberturaAcidentesPessoaisPassageiros=instance.wgt_personal_passenger.active))
+        engine.declare(Fact(condutorJaTeveAcidenteCarro=instance.wgt_accident.active))
+        engine.declare(Fact(indenizacaoMaiorFipe=instance.wgt_extra_fipe.active))
+        engine.declare(Fact(sexo=instance.wgt_gender.text))
+        engine.declare(Fact(veiculoPossuiRastreador=instance.wgt_tracker.active))
+        # engine.declare(Fact(indiceDeRoubo=<to_be_defined>))
+        engine.declare(Fact(utilizaVeiculoParaViagens=instance.wgt_for_travel.active))
+        engine.declare(Fact(cobertura=instance.wgt_car_coverage_type.text))
+        # engine.declare(Fact(possuirDivida=<to_be_defined>))
+
+        # engine.declare(Fact(possuiCasaPropria=<to_be_defined>))
+        engine.declare(Fact(localizadaAreaRiscoNatural=instance.wgt_natural_risk.active))
+        engine.declare(Fact(imovelEmConstrucao=instance.wgt_under_construction.active))
+        engine.declare(Fact(possuiSistemaDeMonitoramento=instance.wgt_medical_monitoring.active))
+        engine.declare(Fact(imovelTombado=instance.wgt_historical.active))
+        engine.declare(Fact(destinadoParaMoradiaColetiva=instance.wgt_shared.active))
+        engine.declare(Fact(tipoDeMoradia=convertStrToInt(instance.wgt_residence_type.text)))
+        engine.declare(Fact(imovelUtilizaMateriaisCombustiveis=instance.wgt_combustible_materials.active))
+        engine.declare(Fact(numeroAparelhosEletronicos=convertStrToInt(instance.wgt_number_of_electronics.text)))
+        engine.declare(Fact(valorDosBens=convertStrToFloat(instance.wgt_value_of_goods.text)))
+        engine.declare(Fact(possuiCofre=instance.wgt_has_safe_box.active))
+        engine.declare(Fact(desejaServicosEmergenciais=instance.wgt_needs_emergencial_services.active))
+        engine.declare(Fact(imovelJaHouveSinistro=instance.wgt_insurance_claim.active))
+
+        # engine.declare(Fact(nivelLDL=<to_be_defined>))
+        engine.declare(Fact(jaTeveCancer=instance.wgt_cancer.active))
+        engine.declare(Fact(jaTeveInfarto=instance.wgt_heart_attack.active))
+        engine.declare(Fact(jaTeveAVC=instance.wgt_stroke.active))
+        engine.declare(Fact(algumaDeficiencia=instance.wgt_deficiencies.active))
+        # engine.declare(Fact(obesidade=<to_be_defined>))
+        engine.declare(Fact(possuiCardiopatiaCongenita=instance.wgt_heart_congenital.active))
+        engine.declare(Fact(possuiArtrose=instance.wgt_osteoarthritis.active))
+        engine.declare(Fact(utilizaMedicamentoControlado=instance.wgt_controlled_medication.active))
+        engine.declare(Fact(possuiDoencaSexualmenteTransmissivel=instance.wgt_sexual_disease.active))
+        engine.declare(Fact(possuiHepatiteB=instance.wgt_hepatitis.active))
+        engine.declare(Fact(gravida=instance.wgt_pregnant.active))
+        engine.declare(Fact(possuiPlanoDeSaude=instance.wgt_health_plan.active))
+
+        print(engine.facts)
+
+        # engine.run()
+
+        # pass
 
 
 class MyApp(App):
