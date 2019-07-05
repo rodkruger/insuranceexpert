@@ -360,7 +360,14 @@ class SeguroDeVida(KnowledgeEngine):
     | Fact(pilotoCorrida=True) 
     | Fact(drogas=True)
     | Fact(indenizacao=True)
-    | Fact(aeronaves=True))
+    | Fact(aeronaves=True)
+    | Fact(cirurgia=True)
+    | Fact(problemaCardiaco=True)
+    | Fact(terminal=True)
+    | Fact(vacinaMeningite=True)
+    | Fact(viagemGuerra=True)
+    | Fact(esportesTiro=True)
+    | Fact(deficiencia=True))
     def NegarSeguro(self):
         print("Não é possível realizar um seguro para o cliente")
     
@@ -376,7 +383,16 @@ class SeguroDeVida(KnowledgeEngine):
     | Fact(bebe = True)
     | Fact(cep = True)
     | Fact(sedentario_=True)
-    | Fact(pagador=True))
+    | Fact(pagador=True)
+    | Fact(cancerNaFamilia=True)
+    | Fact(vacinaPolio=True)
+    | Fact(viagemAfrica=True)
+    | Fact(desempregado_=True)
+    | Fact(sedentario_=True)
+    | Fact(obeso=True)
+    | Fact(artrose=True)
+    | Fact(medicamentoControlado=True)
+    | Fact(hepatite=True))
     def AumentarValor(self):
         print("Aumentar valor do seguro")
         
@@ -420,6 +436,218 @@ class SeguroDeVida(KnowledgeEngine):
     def AumentarValor(self):
         print("Aumentar valor do seguro")
         
+    @Rule(Fact(neuro=True) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(neuro=True) & Fact(acompanhamento=False))
+    def NegarSeguro(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(carro=True))
+    def OferecerSeguroDeCarro(self):
+        print("Oferecer seguro de carro")
+        
+    @Rule(Fact(carro=True) & Fact(aceitar=True))
+    def ContinuarComSeguroDeCarro(self):
+        print("Continuar com peguntas sobre o carro")
+        
+    @Rule(Fact(idade=P(lambda idade: idade<25)))
+    def AumentarValorSeguroCarro(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(abs_ou_air=True))
+    def DiminuirValorSeguroCarro(self):
+        print("Diminuir valor do seguro")
+        
+    @Rule(Fact(frances_ou_chines=True)
+    | Fact(contraTerceiros=True)
+    | Fact(franquia_reduzida=True) 
+    | Fact(roubo=True)
+    | Fact(incendio=True)
+    | Fact(garagem=True)
+    | Fact(carro_reserva=True)
+    | Fact(acidentesPessoais=True)
+    | Fact(condutorAcidente=True)
+    | Fact(indenizacaoFipe=True)
+    | Fact(sexo_=P(lambda sexo_: sexo_==1))
+    | Fact(veiculo_viagens=True)
+    | Fact(cobertura=P(lambda cobertura: cobertura==3)))    
+    def AumentarValorSeguroCarro(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(alemao_ou_japones=True)
+    | Fact(um_condutor=True)
+    | Fact(possuiRastreador=True)
+    | Fact(cobertura=P(lambda cobertura: cobertura==1)))
+    def DiminuirValorSeguroCarro(self):
+        print("Diminuir valor do seguro")
+        
+    @Rule(Fact(idadeCarro=P(lambda idadeCarro: idadeCarro>20)))
+    def AumentarValorSeguroCarro(self):
+        print("Aumentar valor do seguro do carro")
+        
+    @Rule(Fact(indice_roubo=P(lambda indice_roubo: indice_roubo>10)))
+    def AumentarValorSeguroCarro(self):
+        print("Aumentar valor do seguro do carro")
+        
+    @Rule(Fact(cobertura=P(lambda cobertura: cobertura==2)))
+    def ManterValorSeguroCarro(self):
+        print("Manter valor do Seguro")
+        
+    @Rule(Fact(divida=True))
+    def AumentarPercentualRisco(self):
+        print("Aumentar percentual de risco")
+        
+    @Rule(Fact(cirurgia=True) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(cirurgia=True) & Fact(acompanhamento=True))
+    def NegarSeguro(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(sangue=P(lambda sangue: sangue=='O+')) 
+    | Fact(sangue=P(lambda sangue: sangue=='O-')))
+    def DiminuirValorSeguro(self):
+        print("Diminuir valor do seguro")
+        
+    @Rule(Fact(sangue=P(lambda sangue: sangue=='AB+')) 
+    | Fact(sangue=P(lambda sangue: sangue=='AB-')))
+    def AumentarValorSeguro(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(celiaco_=True) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(celiaco_=True) & Fact(acompanhamento=True))
+    def NegarSeguro(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(hipolactasia_=True) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(hipolactasia_=True) & Fact(acompanhamento=True))
+    def NegarSeguro(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(autoImune=True) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(autoImune=True) & Fact(acompanhamento=True))
+    def NegarSeguro(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(casaPropria=True))
+    def OferecerSeguroResidencial(self):
+        print("Oferecer seguro residencial")
+        
+    @Rule(Fact(casaPropria=True) & Fact(aceitar=True))
+    def ContinuarSeguroResidencial(self):
+        print("Prosseguir para contratação do seguro residencial")
+        
+    @Rule(Fact(cep=True)
+    | Fact(tombado=True)
+    | Fact(moradiaColetiva=True)
+    | Fact(utilizaMateriaisCombustiveis=True)
+    | Fact(cofre=True)
+    | Fact(servicosEmergenciais=True)
+    | Fact(jaHouveSinistro=True))
+    def AumentarValorSeguroResidencial(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(areaRiscoNatural=True))
+    def NegarSeguroResidencial(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(emConstrucao=True)
+    | Fact(sistemaMonitoramento=True))
+    def DiminuirValorSeguroResidencial(self):
+        print("Diminuir valor do seguro")
+        
+    @Rule(Fact(moradia=P(lambda moradia: moradia=='casa')))
+    def AumentarValorSeguroResidencial(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(moradia=P(lambda moradia: moradia=='apartamento')))
+    def DiminuirValorSeguroResidencial(self):
+        print("Diminuir valor do seguro")
+        
+    @Rule(Fact(numeroAparelhosEletronicos_=P(lambda numeroAparelhosEletronicos_: numeroAparelhosEletronicos_>10)))
+    def AumentarValorSeguroResidencial(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(valor_Dos_Bens=P(lambda valor_Dos_Bens: valor_Dos_Bens>100000)))
+    def AumentarValorSeguroResidencial(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(transplante=True) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(transplante=True) & Fact(acompanhamento=False))
+    def NegarSeguro(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(LDL=P(lambda LDL: LDL>200)) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(LDL=P(lambda LDL: LDL>200)) & Fact(acompanhamento=False))
+    def NegarSeguro(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(cancer_=True) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(cancer_=True) & Fact(acompanhamento=False))
+    def NegarSeguro(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(infarto_=True) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(infarto_=True) & Fact(acompanhamento=False))
+    def NegarSeguro(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(AVC=True) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(AVC=True) & Fact(acompanhamento=False))
+    def NegarSeguro(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(cardiopatia=True) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(cardiopatia=True) & Fact(acompanhamento=False))
+    def NegarSeguro(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(dst=True) & Fact(acompanhamento=True))
+    def AumentarValor(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(dst=True) & Fact(acompanhamento=False))
+    def NegarSeguro(self):
+        print("Não é possível realizar um seguro para o cliente")
+        
+    @Rule(Fact(sexo_=P(lambda sexo_: sexo_==2)) & Fact(gravida_=True))
+    def AumentarValorSeguro(self):
+        print("Aumentar valor do seguro")
+        
+    @Rule(Fact(planoDeSaude=True))
+    def DiminuirValorSeguro(self):
+        print("Diminuir valor do seguro")
+      
 engine = SeguroDeVida()
 engine.reset()
 
