@@ -432,7 +432,7 @@ class MainScreen(BoxLayout):
         engine.declare(Fact(sistemaMonitoramento=instance.wgt_medical_monitoring.active))
         engine.declare(Fact(tombado=instance.wgt_historical.active))
         engine.declare(Fact(moradiaColetiva=instance.wgt_shared.active))
-        engine.declare(Fact(moradia=convertStrToInt(instance.wgt_residence_type.text)))
+        engine.declare(Fact(moradia=instance.wgt_residence_type.text))
         engine.declare(Fact(utilizaMateriaisCombustiveis=instance.wgt_combustible_materials.active))
         engine.declare(Fact(numeroAparelhosEletronicos_=convertStrToInt(instance.wgt_number_of_electronics.text)))
         engine.declare(Fact(valor_Dos_Bens=convertStrToFloat(instance.wgt_value_of_goods.text)))
