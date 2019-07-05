@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3da6dd2c-6d07-4d33-ae94-b7cf6d6da2f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LifeInsurance.py" beforeDir="false" afterPath="$PROJECT_DIR$/LifeInsurance.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainGui.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainGui.py" afterDir="false" />
     </list>
@@ -17,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MainGui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="153" column="25" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
+            <state relative-caret-position="204">
+              <caret line="461" column="92" selection-start-line="461" selection-start-column="92" selection-end-line="461" selection-end-column="92" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -29,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LifeInsurance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="742" lean-forward="true" selection-start-line="742" selection-end-line="742" />
+            <state relative-caret-position="10644">
+              <caret line="734" column="8" selection-start-line="734" selection-start-column="8" selection-end-line="734" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -46,7 +45,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sinistro</find>
       <find>avc</find>
       <find>obesid</find>
       <find>cardiopa</find>
@@ -74,8 +72,9 @@
       <find>wgt_radical_sports</find>
       <find>wgt_vaccine_meningite</find>
       <find>wgt_vaccine_polio</find>
-      <find>seguro_nao_possivel</find>
       <find>vacinaMeningite</find>
+      <find>seguro_nao_possivel</find>
+      <find>self.declare(Fact(seguro_nao_possivel=True))</find>
     </findStrings>
     <replaceStrings>
       <replace>height=25</replace>
@@ -85,6 +84,7 @@
       <replace>CheckBox(width=200, size_hint=(None, 1))</replace>
       <replace>self.posInputField('</replace>
       <replace>.parent = None</replace>
+      <replace>self.seguroNaoPossivel = True</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -195,7 +195,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20621932" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2782324" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30441898" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -233,7 +233,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/MainGui.py</url>
-          <line>444</line>
+          <line>456</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -284,15 +284,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LifeInsurance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="742" lean-forward="true" selection-start-line="742" selection-end-line="742" />
+        <state relative-caret-position="10644">
+          <caret line="734" column="8" selection-start-line="734" selection-start-column="8" selection-end-line="734" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MainGui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="153" column="25" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
+        <state relative-caret-position="204">
+          <caret line="461" column="92" selection-start-line="461" selection-start-column="92" selection-end-line="461" selection-end-column="92" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

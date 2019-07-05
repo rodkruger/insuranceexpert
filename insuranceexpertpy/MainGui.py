@@ -7,6 +7,7 @@ from kivy.uix.button import Button
 from kivy.uix.checkbox import CheckBox
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
+from kivy.uix.popup import Popup
 from kivy.uix.spinner import Spinner
 from kivy.uix.textinput import TextInput
 from pyknow import Fact
@@ -34,6 +35,9 @@ class MainScreen(BoxLayout):
     top_lyt = BoxLayout()
     main_lyt = BoxLayout()
     bottom_lyt = BoxLayout()
+
+    # Title
+    wgt_title = Label(font_size='40sp')
 
     # Common Widgets
     wgt_cpf_negativado = CheckBox(width=200, size_hint=(None, 1))
@@ -163,9 +167,11 @@ class MainScreen(BoxLayout):
         return aLabel
 
     def fillHeader(self):
-
+        self.top_lyt.add_widget(self.wgt_title)
 
     def fillCommon(self):
+        self.wgt_title.text = "Calcular Score - Dados Básicos"
+
         common_lyt = GridLayout(cols=2, row_force_default=True, row_default_height=30, size_hint=(None, 1), width=400)
 
         common_lyt.cols_minimum[0] = 200
@@ -202,6 +208,8 @@ class MainScreen(BoxLayout):
         self.add_widget(buttons_lyt)
 
     def fillLifeInsurance(self):
+        self.wgt_title.text = "Calcular Score - Seguro de Vida"
+
         life_insurance_lyt = BoxLayout(orientation='vertical')
 
         life_insurance_basics_lyt = GridLayout(cols=2, row_force_default=True, row_default_height=30,
@@ -267,6 +275,8 @@ class MainScreen(BoxLayout):
         self.main_lyt.add_widget(life_insurance_lyt)
 
     def fillCarInsurance(self):
+        self.wgt_title.text = "Calcular Score - Seguro de Automóvel"
+
         car_insurance_lyt = BoxLayout(orientation='vertical')
 
         car_insurance_rules_lyt = GridLayout(cols=4, row_default_height=30)
@@ -298,6 +308,8 @@ class MainScreen(BoxLayout):
         self.main_lyt.add_widget(car_insurance_lyt)
 
     def fillHomeInsurance(self):
+        self.wgt_title.text = "Calcular Score - Seguro Residencial"
+
         home_insurance_lyt = BoxLayout(orientation='vertical')
 
         home_insurance_rules_lyt = GridLayout(cols=2, row_default_height=30)
@@ -444,8 +456,17 @@ class MainScreen(BoxLayout):
 
         engine.run()
 
-        print(engine.facts)
-        print(engine.insuranceScore)
+        if (engine.seguroNaoPossivel == True):
+            popup = Popup(title='Resultado da Análise',
+                          content=Label(
+                              text='Caro cliente. De acordo com nossos critérios internos,\nnão é possível realizarmos seu seguro'),
+                          size_hint=(None, None), size=(400, 200))
+        else:
+            popup = Popup(title='Resultado da Análise',
+                          content=Label(text='Caro cliente. Seu score de risco é de ' + str(engine.insuranceScore)),
+                          size_hint=(None, None), size=(400, 200))
+
+        popup.open()
 
     def clear_parents(self):
         self.wgt_cpf_negativado.parent = None

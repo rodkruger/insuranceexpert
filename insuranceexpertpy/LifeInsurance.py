@@ -445,6 +445,7 @@ class possuiPlanoDeSaude(Fact):
 
 class SeguroDeVida(KnowledgeEngine):
     insuranceScore = 0
+    seguroNaoPossivel = False
 
     @Rule(Fact(cpf=True) | Fact(esportesRadicais=True)
           | Fact(pilotoCorrida=True)
@@ -459,7 +460,7 @@ class SeguroDeVida(KnowledgeEngine):
           | Fact(esportesTiro=True)
           | Fact(deficiencia=True))
     def regra001(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(doencasGraves=True) & Fact(acompanhamento=True))
     def regra002(self):
@@ -495,7 +496,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(idade=P(lambda idade: idade >= 70)))
     def regra006(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(diabetes=P(lambda diabetes: diabetes < 120)))
     def AumentarValor(self):
@@ -503,7 +504,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(diabetes=P(lambda diabetes: diabetes > 200)))
     def regra007(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(profissao=True))
     def regra008(self):
@@ -515,7 +516,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(pressao=True) & Fact(acompanhamento=False))
     def regra010(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(possuiFilhos_=True) & Fact(quantosFilhos=P(lambda possuiFilhos_: possuiFilhos_ > 0)))
     def regra011(self):
@@ -535,7 +536,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(neuro=True) & Fact(acompanhamento=False))
     def regra014(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(carro=True))
     def regra015(self):
@@ -598,7 +599,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(cirurgia=True) & Fact(acompanhamento=True))
     def regra025(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(sangue=P(lambda sangue: sangue == 'O+'))
           | Fact(sangue=P(lambda sangue: sangue == 'O-')))
@@ -616,7 +617,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(celiaco_=True) & Fact(acompanhamento=True))
     def regra029(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(hipolactasia_=True) & Fact(acompanhamento=True))
     def regra030(self):
@@ -624,7 +625,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(hipolactasia_=True) & Fact(acompanhamento=True))
     def regra031(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(autoImune=True) & Fact(acompanhamento=True))
     def regra032(self):
@@ -632,7 +633,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(autoImune=True) & Fact(acompanhamento=True))
     def regra033(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(casaPropria=True))
     def regra034(self):
@@ -654,7 +655,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(areaRiscoNatural=True))
     def regra037(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(emConstrucao=True)
           | Fact(sistemaMonitoramento=True))
@@ -683,7 +684,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(transplante=True) & Fact(acompanhamento=False))
     def regra044(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(LDL=P(lambda LDL: LDL > 200)) & Fact(acompanhamento=True))
     def regra045(self):
@@ -691,7 +692,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(LDL=P(lambda LDL: LDL > 200)) & Fact(acompanhamento=False))
     def regra046(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(cancer_=True) & Fact(acompanhamento=True))
     def regra047(self):
@@ -699,7 +700,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(cancer_=True) & Fact(acompanhamento=False))
     def regra048(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(infarto_=True) & Fact(acompanhamento=True))
     def regra049(self):
@@ -707,7 +708,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(infarto_=True) & Fact(acompanhamento=False))
     def regra050(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(AVC=True) & Fact(acompanhamento=True))
     def regra051(self):
@@ -715,7 +716,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(AVC=True) & Fact(acompanhamento=False))
     def NegarSeguro(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(cardiopatia=True) & Fact(acompanhamento=True))
     def regra052(self):
@@ -723,7 +724,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(cardiopatia=True) & Fact(acompanhamento=False))
     def regra053(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(dst=True) & Fact(acompanhamento=True))
     def regra054(self):
@@ -731,7 +732,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(dst=True) & Fact(acompanhamento=False))
     def regra055(self):
-        self.declare(Fact(seguro_nao_possivel=True))
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(sexo_=P(lambda sexo_: sexo_ == 2)) & Fact(gravida_=True))
     def regra056(self):
