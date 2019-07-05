@@ -471,7 +471,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(doencasGraves=True) & Fact(acompanhamento=False))
     def regra003(self):
-        print("Não é possível realizar um seguro para o cliente")
+        self.seguroNaoPossivel = True
 
     @Rule(Fact(fuma=True)
           | Fact(bebe=True)
@@ -714,10 +714,6 @@ class SeguroDeVida(KnowledgeEngine):
     def regra051(self):
         self.insuranceScore += 1
 
-    @Rule(Fact(AVC=True) & Fact(acompanhamento=False))
-    def NegarSeguro(self):
-        self.seguroNaoPossivel = True
-
     @Rule(Fact(cardiopatia=True) & Fact(acompanhamento=True))
     def regra052(self):
         self.insuranceScore += 1
@@ -741,3 +737,31 @@ class SeguroDeVida(KnowledgeEngine):
     @Rule(Fact(planoDeSaude=True))
     def regra057(self):
         self.insuranceScore -= 1
+
+    @Rule(Fact(AVC=True) & Fact(acompanhamento=False))
+    def regra058(self):
+        self.seguroNaoPossivel = True
+
+    @Rule(Fact(serasa=P(lambda serasa: serasa < 600)))
+    def regra059(self):
+        self.declare(Fact(divida=True))
+
+    @Rule(Fact(brand=P(lambda brand: brand == 'Toyota')) |
+          Fact(brand=P(lambda brand: brand == 'Honda')) |
+          Fact(brand=P(lambda brand: brand == 'Volkswagen')))
+    def regra060(self):
+        self.declare(Fact(alemao_ou_japones=True))
+
+    @Rule(Fact(brand=P(lambda brand: brand == 'Renault')) |
+          Fact(brand=P(lambda brand: brand == 'Peugeot')) |
+          Fact(brand=P(lambda brand: brand == 'Citröen')))
+    def regra061(self):
+        self.declare(Fact(frances_ou_chines=True))
+
+    @Rule(Fact(quantosFilhos=P(lambda quantosFilhos: quantosFilhos > 0)))
+    def regra062(self):
+        self.declare(Fact(possuiFilhos_=True))
+
+    @Rule(Fact(numero_motoristas=P(lambda numero_motoristas: numero_motoristas <= 1)))
+    def regra063(self):
+        self.declare(Fact(um_condutor=True))

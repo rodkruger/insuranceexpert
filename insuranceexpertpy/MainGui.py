@@ -380,10 +380,8 @@ class MainScreen(BoxLayout):
         engine.declare(Fact(idade=convertStrToFloat(instance.wgt_age.text)))
         engine.declare(Fact(diabetes=instance.wgt_diabetes.active))
         engine.declare(Fact(profissao=instance.wgt_profession.text))
-        # engine.declare(Fact(pressao=<to_be_defined>))
         engine.declare(Fact(sedentario_=instance.wgt_sports_practice.active))
-        # engine.declare(Fact(pagador=<to_be_defined>))
-        # engine.declare(Fact(possuiFilhos_=<to_be_defined>))
+        engine.declare(Fact(serasa=convertStrToFloat(instance.wgt_serasa_score.text)))
         engine.declare(Fact(quantosFilhos=convertStrToInt(instance.wgt_children.text)))
         engine.declare(Fact(casado=instance.wgt_marital_status.text))
         engine.declare(Fact(viagens=convertStrToInt(instance.wgt_travels.text)))
@@ -406,8 +404,6 @@ class MainScreen(BoxLayout):
         engine.declare(Fact(transplante=instance.wgt_transplant.active))
 
         engine.declare(Fact(abs_ou_air=instance.wgt_airbags.active))
-        # engine.declare(Fact(frances_ou_chines=instance.wgt_model.text))
-        # engine.declare(Fact(alemao_ou_japones=instance.wgt_model.text))
         engine.declare(Fact(contraTerceiros=instance.wgt_third.active))
         engine.declare(Fact(franquia_reduzida=instance.wgt_reduced.active))
         engine.declare(Fact(roubo=instance.wgt_theft.active))
@@ -421,12 +417,12 @@ class MainScreen(BoxLayout):
         engine.declare(Fact(indenizacaoFipe=instance.wgt_extra_fipe.active))
         engine.declare(Fact(sexo_=instance.wgt_gender.text))
         engine.declare(Fact(possuiRastreador=instance.wgt_tracker.active))
-        # engine.declare(Fact(indice_roubo=<to_be_defined>))
+        engine.declare(Fact(indice_roubo=convertStrToFloat(instance.wgt_theft_index.text)))
         engine.declare(Fact(veiculo_viagens=instance.wgt_for_travel.active))
         engine.declare(Fact(cobertura_=instance.wgt_car_coverage_type.text))
-        # engine.declare(Fact(divida=<to_be_defined>))
+        engine.declare(Fact(brand=instance.wgt_brand.text))
+        engine.declare(Fact(numero_motoristas=convertStrToInt(instance.wgt_drivers.text)))
 
-        # engine.declare(Fact(casaProria=<to_be_defined>))
         engine.declare(Fact(areaRiscoNatural=instance.wgt_natural_risk.active))
         engine.declare(Fact(emConstrucao=instance.wgt_under_construction.active))
         engine.declare(Fact(sistemaMonitoramento=instance.wgt_medical_monitoring.active))
@@ -440,7 +436,6 @@ class MainScreen(BoxLayout):
         engine.declare(Fact(servicosEmergenciais=instance.wgt_needs_emergencial_services.active))
         engine.declare(Fact(jaHouveSinistro=instance.wgt_insurance_claim.active))
 
-        # engine.declare(Fact(nivelLDL=<to_be_defined>))
         engine.declare(Fact(cancer_=instance.wgt_cancer.active))
         engine.declare(Fact(infarto_=instance.wgt_heart_attack.active))
         engine.declare(Fact(AVC=instance.wgt_stroke.active))
@@ -455,6 +450,8 @@ class MainScreen(BoxLayout):
         engine.declare(Fact(planoDeSaude=instance.wgt_health_plan.active))
 
         engine.run()
+
+        print(engine.facts)
 
         if (engine.seguroNaoPossivel == True):
             popup = Popup(title='Resultado da Análise',

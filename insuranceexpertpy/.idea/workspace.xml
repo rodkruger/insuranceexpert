@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3da6dd2c-6d07-4d33-ae94-b7cf6d6da2f3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/LifeInsurance.py" beforeDir="false" afterPath="$PROJECT_DIR$/LifeInsurance.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainGui.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainGui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MainGui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="434" column="68" selection-start-line="434" selection-start-column="68" selection-end-line="434" selection-end-column="68" />
+            <state relative-caret-position="195">
+              <caret line="382" selection-start-line="382" selection-end-line="382" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -27,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LifeInsurance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="668" column="22" selection-start-line="668" selection-start-column="15" selection-end-line="668" selection-end-column="22" />
+            <state relative-caret-position="246">
+              <caret line="590" lean-forward="true" selection-start-line="590" selection-end-line="590" />
             </state>
           </provider>
         </entry>
@@ -44,24 +45,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>artros</find>
-      <find>possuiPlanoDeSaude</find>
-      <find>on_wgt_btn_calculate_press</find>
-      <find>doencasGrav</find>
-      <find>acompanha</find>
-      <find>= CheckBox(width=200, size_hint=(None, 1))</find>
-      <find>cpfNegativado</find>
-      <find>praticaEsportesRadicais</find>
-      <find>pilotoDeCorrida</find>
-      <find>usaDrogas</find>
-      <find>possuiDoencasGraves</find>
-      <find>cpf</find>
-      <find>cirurgia</find>
-      <find>abs_ou</find>
-      <find>casa</find>
-      <find>esportesTiro</find>
-      <find>cobertura_</find>
-      <find>jaHouveSinistro</find>
       <find>transpl</find>
       <find>cardiopatia</find>
       <find>jaTeveCancer</find>
@@ -73,7 +56,25 @@
       <find>self.declare(Fact(seguro_nao_possivel=True))</find>
       <find>desempregado_</find>
       <find>wgt_unemployed</find>
+      <find>Não é poss</find>
+      <find>não é poss</find>
       <find>moradia</find>
+      <find>divi</find>
+      <find>NegarSe</find>
+      <find>alema</find>
+      <find>Toyo</find>
+      <find>wgt_brand</find>
+      <find>alemao_ou_japones</find>
+      <find>wgt_bran</find>
+      <find>FRANC</find>
+      <find>motori</find>
+      <find>condu</find>
+      <find>seras</find>
+      <find>wgt_drivers</find>
+      <find>wgt_theft_index</find>
+      <find>roubo</find>
+      <find>rou</find>
+      <find>ind</find>
     </findStrings>
     <replaceStrings>
       <replace>height=25</replace>
@@ -194,7 +195,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.400982" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24386252" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30441898" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -208,12 +209,12 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18675596" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18675596" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23076923" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24386252" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30441898" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -232,7 +233,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/MainGui.py</url>
-          <line>456</line>
+          <line>451</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -283,15 +284,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LifeInsurance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="668" column="22" selection-start-line="668" selection-start-column="15" selection-end-line="668" selection-end-column="22" />
+        <state relative-caret-position="246">
+          <caret line="590" lean-forward="true" selection-start-line="590" selection-end-line="590" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MainGui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="434" column="68" selection-start-line="434" selection-start-column="68" selection-end-line="434" selection-end-column="68" />
+        <state relative-caret-position="195">
+          <caret line="382" selection-start-line="382" selection-end-line="382" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
