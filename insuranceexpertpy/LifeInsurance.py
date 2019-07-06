@@ -460,6 +460,7 @@ class SeguroDeVida(KnowledgeEngine):
           | Fact(esportesTiro=True)
           | Fact(deficiencia=True))
     def regra001(self):
+        print("regra001")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(doencasGraves=True) & Fact(acompanhamento=True))
@@ -471,6 +472,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(doencasGraves=True) & Fact(acompanhamento=False))
     def regra003(self):
+        print("regra002")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(fuma=True)
@@ -496,6 +498,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(idade=P(lambda idade: idade >= 70)))
     def regra006(self):
+        print("regra006")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(diabetes=P(lambda diabetes: diabetes < 120)))
@@ -504,6 +507,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(diabetes=P(lambda diabetes: diabetes > 200)))
     def regra007(self):
+        print("regra007")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(profissao=True))
@@ -516,6 +520,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(pressao=True) & Fact(acompanhamento=False))
     def regra010(self):
+        print("regra010")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(possuiFilhos_=True) & Fact(quantosFilhos=P(lambda possuiFilhos_: possuiFilhos_ > 0)))
@@ -536,6 +541,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(neuro=True) & Fact(acompanhamento=False))
     def regra014(self):
+        print("regra014")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(carro=True))
@@ -599,6 +605,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(cirurgia=True) & Fact(acompanhamento=True))
     def regra025(self):
+        print("regra025")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(sangue=P(lambda sangue: sangue == 'O+'))
@@ -617,6 +624,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(celiaco_=True) & Fact(acompanhamento=True))
     def regra029(self):
+        print("regra029")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(hipolactasia_=True) & Fact(acompanhamento=True))
@@ -625,6 +633,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(hipolactasia_=True) & Fact(acompanhamento=True))
     def regra031(self):
+        print("regra031")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(autoImune=True) & Fact(acompanhamento=True))
@@ -633,6 +642,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(autoImune=True) & Fact(acompanhamento=True))
     def regra033(self):
+        print("regra033")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(casaPropria=True))
@@ -655,6 +665,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(areaRiscoNatural=True))
     def regra037(self):
+        print("regra037")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(emConstrucao=True)
@@ -684,6 +695,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(transplante=True) & Fact(acompanhamento=False))
     def regra044(self):
+        print("regra044")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(LDL=P(lambda LDL: LDL > 200)) & Fact(acompanhamento=True))
@@ -692,6 +704,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(LDL=P(lambda LDL: LDL > 200)) & Fact(acompanhamento=False))
     def regra046(self):
+        print("regra046")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(cancer_=True) & Fact(acompanhamento=True))
@@ -700,6 +713,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(cancer_=True) & Fact(acompanhamento=False))
     def regra048(self):
+        print("regra048")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(infarto_=True) & Fact(acompanhamento=True))
@@ -708,6 +722,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(infarto_=True) & Fact(acompanhamento=False))
     def regra050(self):
+        print("regra050")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(AVC=True) & Fact(acompanhamento=True))
@@ -720,6 +735,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(cardiopatia=True) & Fact(acompanhamento=False))
     def regra053(self):
+        print("regra053")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(dst=True) & Fact(acompanhamento=True))
@@ -728,6 +744,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(dst=True) & Fact(acompanhamento=False))
     def regra055(self):
+        print("regra055")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(sexo_=P(lambda sexo_: sexo_ == 2)) & Fact(gravida_=True))
@@ -740,6 +757,7 @@ class SeguroDeVida(KnowledgeEngine):
 
     @Rule(Fact(AVC=True) & Fact(acompanhamento=False))
     def regra058(self):
+        print("regra058")
         self.seguroNaoPossivel = True
 
     @Rule(Fact(serasa=P(lambda serasa: serasa < 600)))
